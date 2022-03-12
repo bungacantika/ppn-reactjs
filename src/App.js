@@ -44,29 +44,29 @@ class App extends Component {
   render() {
     return (
       <div className="App-header">
-        <div className="container col-md-6 pt-3">
-          <div className="card-header bg-danger text-center text-white">
-            <h3>Hitung Harga Akhir</h3>
-          </div>
-          <div className="card-body">
-            <div className="form-group mb-3">
-              <label>Harga awal :</label>
-              <input type="number" className="form-control" onChange={this.changeHarga}></input>
+        <div className="container col-md-6">
+          <div className="card">
+            <div className="card-header bg-danger text-center text-white">
+              <h3>Hitung Harga Akhir</h3>
             </div>
-            <div className="form-group mb-3">
-              <label>PPN :</label>
-              <input type="number" className="form-control" onChange={this.changePPN}></input>
+            <div className="card-body">
+              <div className="form-group mb-3">
+                <label>Harga awal :</label>
+                <input type="number" className="form-control" onChange={this.changeHarga}></input>
+              </div>
+              <div className="form-group mb-3">
+                <label>PPN :</label>
+                <input type="number" className="form-control" onChange={this.changePPN}></input>
+              </div>
+              <div className="form-group mb-3">
+                <label>Diskon :</label>
+                <input type="number" className="form-control" onChange={this.changeDiskon}></input>
+              </div>
+              <div className="form-group mb-3">
+                <button className="btn btn-danger form-control" onClick={this.Hitung}>Hitung</button>
+              </div>
+              <h5 className="alert alert-success">Rp.{this.state.harga_akhir},00</h5>
             </div>
-            <div className="form-group mb-3">
-              <label>Diskon :</label>
-              <input type="number" className="form-control" onChange={this.changeDiskon}></input>
-            </div>
-            <div className="form-group mb-3">
-              <button className="btn btn-danger form-control" onClick={this.Hitung}>Hitung</button>
-            </div>
-            <div class="card-footer">
-            <h5 className="alert alert-success">Rp.{this.state.harga_akhir},00</h5>
-          </div>
           </div>
         </div>
       </div>
